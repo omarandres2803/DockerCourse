@@ -38,3 +38,27 @@
 ## Remove all the stopped containers
 
 > docker container prune
+
+---
+
+## Run container in interactive mode
+
+> docker run -it ubuntu
+
+---
+
+## Run Image, detach it and specify a command to be executed
+
+> docker run -d ubuntu tail -f /dev/null
+
+---
+
+## Execute a command on an existing and running container
+
+> docker exec -it \<container name\> bash
+
+---
+
+## To stop a container
+
+> docker stop \<container name\>
