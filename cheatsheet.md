@@ -101,3 +101,15 @@
 > docker run --mount src=\<name_of_volume>,dst=\<container_destination_folder> \<container_name>
 
 ---
+
+# Insert and Extract files to/from a container
+
+## Copy a file/folder to a container's folder
+> docker cp \<file_name> \<container_name>:\<container_folder>
+
+---
+
+## Copy a file/folder from a container
+> docker cp \<container_name>:\<container_folder> \<host_destination_folder>
+
+--- 
