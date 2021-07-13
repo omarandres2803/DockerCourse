@@ -82,3 +82,22 @@
 
 ## Bind mounts (To link a host's folder with a container's folder)
 > docker run -d -v \<host_folder>:\<container_folder> \<container_name>
+
+---
+
+# Volumes
+
+## List all volumes
+> docker volume ls
+
+---
+
+## Create a volume
+> docker volume create \<volume_name>
+
+---
+
+## Associate a volume to a container
+> docker run --mount src=\<name_of_volume>,dst=\<container_destination_folder> \<container_name>
+
+---
