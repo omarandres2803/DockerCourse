@@ -80,6 +80,16 @@
 
 ---
 
+## Delete all the containers (those stopped and also those running)
+> docker rm -f $(docker ps -aq)
+
+---
+
+## Clean system from stopped containers, not used images, volumes and networks
+> docker system prune
+
+---
+
 ## Bind mounts (To link a host's folder with a container's folder)
 > docker run -d -v \<host_folder>:\<container_folder> \<container_name>
 
@@ -179,4 +189,21 @@ To specify that we want containers to be able to connect to it, we would have to
 
 ---
 
-## 
+# Docker Compose
+
+## To put the environment up
+> docker-compose up
+
+> docker-compose up -d
+
+> docker-compose ps
+
+---
+
+## To execute a command on a container of our docker-compose, we have to communicate with the service like this :
+> docker-compose exec \<service_name> <\command>
+
+---
+
+## To destroy the environment and clean
+> docker-compose down
